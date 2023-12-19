@@ -8,16 +8,13 @@ int main (){
 	ofstream dest;
 	source.open("cheerbook.txt");
 	dest.open("cheerbook_copy.txt");
+	string text;
 	dest << "-------------------- BOOM ---------------------"<<endl;
-	dest <<"AR CHI"<<endl;
-    dest <<"AR BOW"<<endl;
-    dest <<"CHOW CHOW"<<endl;
-    dest <<"BA KA"<<endl;
-    dest <<"BA GEAR"<<endl;
-    dest <<"CHEER CHEER"<<endl;
-    dest <<"WE ARE ALL"<<endl;
-    dest <<"ENTANEER"<<endl;
-    dest <<"CMU"<<endl;
+	while (getline(source,text))
+	{
+		dest<<text<<endl;
+	}
+	
 	dest << "-------------------- HA!! ---------------------"<<endl;
 
     source.close();
